@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,14 @@
     <link rel="shortcut icon" href="/Icons/Favicon.jpg" type="image/x-icon">
     <title>ООО СМТ</title>
 </head>
+
 <body>
     <div class="wrapper">
         <header class="header">
             <div class="container">
                 <div class="header__inner">
                     <div class="header__top">
-                        <a class="header__logo" href="#">
+                        <a class="header__logo" href="/">
                             <img class="logo" src="/Icons/Favicon.jpg" alt="Logo">
                             <div class="header__company-name">СТРОЙМЕГАТРАНС</div>
                         </a>
@@ -24,16 +26,16 @@
                                     <a class="header__nav-link" href="#technique">Спецтехника</a>
                                 </li>
                                 <li class="header__nav-item">
-                                    <a class="header__nav-link" href="#">О нас</a>
+                                    <a class="header__nav-link" href="#about_us">О нас</a>
                                 </li>
                                 <li class="header__nav-item">
-                                    <a class="header__nav-link" href="#">Контакты</a>
+                                    <a class="header__nav-link" href="#contacts">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
                         <div class="header__info">
                             <a class="header__tel" href="tel:89255856361">+7 (925) 585-63-61</a>
-                            <button class="header__button button">Свяжитесь с нами</button>
+                            <a class="header__button button" href="#contacts">Свяжитесь с нами</a>
                         </div>
                     </div>
                     <div class="header__body">
@@ -41,7 +43,7 @@
                         <div class="header__text">Cрочная подача спецтехники с
                             самыми опытными водителями
                         </div>
-                        <button class="header__button button">Свяжитесь с нами</button>
+                        <a class="header__button button" href="#contacts">Свяжитесь с нами</a>
                     </div>
                 </div>
             </div>
@@ -53,34 +55,120 @@
                         <h2 class="heading technique__heading">СПЕЦТЕХНИКА</h2>
                         <ul class="technique__list">
                             <li class="technique__item">
-                                <img src="/Images/JCB.jpg" alt="JCB">
-                                <h4 class="technique__subtitle">Аренда экскаватора</h4>
-                                <div class="technique__info">
-                                    <div class="technique__model">JCB 3 CX</div>
-                                    <div class="technique__text">от 18 000 рублей</div>
-                                </div>
+                                <a class="technique__item-link" href="#">
+                                    <img src="/Images/JCB.jpg" alt="JCB">
+                                    <h4 class="technique__subtitle">Экскаватор</h4>
+                                    <div class="technique__info">
+                                        <div class="technique__model">JCB 3 CX</div>
+                                        <div class="technique__text">от 18 000 рублей</div>
+                                    </div>
+                                </a>
                             </li>
                             <li class="technique__item">
-                                <img src="/Images/avtokran.jpg" alt="Автокран">
-                                <h4 class="technique__subtitle">Аренда автокрана</h4>
-                                <div class="technique__info">
-                                    <div class="technique__model">Ивановец КС-45717К-1Р</div>
-                                    <div class="technique__text">от 16 000 рублей</div>
-                                </div>
+                                <a class="technique__item-link" href="#">
+                                    <img src="/Images/avtokran.jpg" alt="Автокран">
+                                    <h4 class="technique__subtitle">Автокран</h4>
+                                    <div class="technique__info">
+                                        <div class="technique__model">Ивановец КС-45717К-1Р</div>
+                                        <div class="technique__text">от 16 000 рублей</div>
+                                    </div>
+                                </a>
                             </li>
                             <li class="technique__item">
-                                <img src="/Images/JCB.jpg" alt="JCB">
-                                <h4 class="technique__subtitle">Аренда манипулятора</h4>
-                                <div class="technique__info">
-                                    <div class="technique__model">Nissan Diesel</div>
-                                    <div class="technique__text">от 12 000 рублей</div>
-                                </div>
+                                <a class="technique__item-link" href="#">
+                                    <img src="/Images/manip.jpg" alt="Манипулятор">
+                                    <h4 class="technique__subtitle">Манипулятор</h4>
+                                    <div class="technique__info">
+                                        <div class="technique__model">Nissan Diesel</div>
+                                        <div class="technique__text">от 12 000 рублей</div>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </section>
+            <section class="about_us main__about_us" id="about_us">
+                <div class="container">
+                    <div class="about_us__inner">
+                        <div class="about_us__top">
+                            <h2 class="heading about_us__heading">О НАС</h2>
+                        </div>
+                        <div class="about_us__body">
+                            <p class="about_us__info">
+                                <div class="about_us__text">
+                                    Мы уже более 20 лет предоставляем в аренду спецтехнику в Москве и
+                                    городах Подмосковья на максимально выгодных условиях. В нашем распоряжении спецтехника в
+                                    отличном состоянии, готовая своевременно выполнить Ваши задачи.
+                                </div>
+                                <div class="about_us__text">
+                                    Аренда спецтехники — востребованная услуга среди компаний в Москве и Московской области,
+                                    которая позволяет решить комплекс задач по механизации строительно-монтажных работ,
+                                    установке, а также транспортировке грузов и сложного габаритного оборудования.
+                                </div>
+                                <div class="about_us__text">
+                                    Строительные проекты по возведению жилых домов, прокладке автомобильных магистралей и
+                                    железных дорог, инженерных и тепловых сетей невозможны без привлечения спецтехники.
+                                    Когда покупка оборудования нерентабельна, взять технику в аренду можно, обратившись в
+                                    компанию ООО СТРОЙМЕГАТРАНС.
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contacts main__contacts" id="contacts">
+                <div class="container">
+                    <div class="contacts__inner">
+                        <div class="contacts__content">
+                            <h2 class="heading contacts__heading">КОНТАКТЫ</h2>
+                            <ul class="contacts__info-list">
+                                <li class="contacts__info-item">
+                                    <a class="contacts__info-link contacts__tel" href="tel:89255856361">+7 (925)585-63-61</a>
+                                </li>
+                                <li class="contacts__info-item">
+                                    <a class="contacts__info-link contacts__mail"
+                                        href="mailto:STROYMEGATRANS@yandex.ru">STROYMEGATRANS@yandex.ru</a>
+                                </li>
+                                <li class="contacts__info-item">
+                                    <div class="contacts__address">г. Реутов, проспект Мира, дом 36А</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="map" class="map"></div>
+                    </div>
+                </div>
+            </section>
         </main>
+        <footer class="footer">
+            <div class="footer__inner">
+                <div class="container">
+                    <div class="footer__content">
+                        <a class="footer__logo" href="/">
+                            <img class="logo" src="/Icons/Favicon.jpg" alt="Logo">
+                            <div class="header__company-name">СТРОЙМЕГАТРАНС</div>
+                        </a>
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="#technique">Спецтехника</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="#about_us">О нас</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a class="footer__nav-link" href="#contacts">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
+
+<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://api-maps.yandex.ru/3.0/?apikey=a07d10e7-af18-4cf7-80dd-a432d2986143&lang=ru_RU"
+    type="text/javascript"></script>
+<script defer src="/JavaScript/main.js"></script>
+
 </html>
