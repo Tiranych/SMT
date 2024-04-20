@@ -35,6 +35,22 @@ body, html {
     border: 3px solid;
 }
 
+.overlay-off {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    background: rgba(30, 27, 27, 0.3);
+    transition: all .3s;
+}
+
+.overlay-on {
+    visibility: hidden;
+    opacity: 0;
+}
+
 .heading {
     font-size: 30px;
     font-weight: 800;
@@ -172,6 +188,119 @@ body, html {
 
 .technique__heading {
     margin-bottom: 30px;
+}
+
+.technique__jcb {
+    display: none;
+}
+.technique__autocrane {
+    display: none;
+}
+.technique__man {
+    display: none;
+}
+
+.technique__jcb--active {
+    display: block;
+    border-radius: 10px;
+    background: #fff;
+    width: 1200px;
+    height: 850px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.technique__autocrane--active {
+    display: block;
+    border-radius: 10px;
+    background: #fff;
+    width: 1200px;
+    height: 700px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.technique__man--active {
+    display: block;
+    border-radius: 10px;
+    background: #fff;
+    width: 1200px;
+    height: 700px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.technique__params {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.technique__params-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.technique__params-img {
+    margin: auto 0;
+}
+
+.bucket {
+    height: 100%;
+    max-width: 556px;
+    max-height: 351px;
+}
+
+.technique__params-content {
+    padding: 0 30px;
+}
+
+.technique__params-heading {
+    font-size: 34px;
+    font-weight: bold;
+    padding: 15px 0;
+    text-align: center;
+}
+
+h4{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.technique__params-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.technique__jcb .technique__params-item {
+    margin-bottom: 6px;
+}
+.technique__params-item:last-child {
+    margin-bottom: 0px;
+}
+
+.technique__man .technique__params-list {
+    margin-top: 50px;
+}
+
+.technique__params-key {
+    padding-left: 10px;
+}
+.technique__params-value {
+    font-weight: bold;
+    padding-right: 20px;
 }
 
 .technique__list {

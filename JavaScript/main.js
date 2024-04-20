@@ -20,7 +20,6 @@ $(function () {
             }
 
         );
-
         
         // Добавляем слой для отображения схематической карты
         map.addChild(new YMapDefaultSchemeLayer());
@@ -35,7 +34,33 @@ $(function () {
         $('body, html').animate({ scrollTop: top }, 800)
     });
 
-    $('.technique__item-link').on('click', function (e) {
+    $('.technique__item-link, .overlay-off').on('click', function (e) {
         e.preventDefault()
+        if ($(this).hasClass('technique__item-jcb')) {
+            $('.technique__jcb').addClass('technique__jcb--active')
+            $('.overlay-off').removeClass('overlay-on')
+        }
+        else if ($(this).hasClass('technique__item-autocrane')) {
+            $('.technique__autocrane').addClass('technique__autocrane--active')
+            $('.overlay-off').removeClass('overlay-on')
+        }
+        else if ($(this).hasClass('technique__item-man')) {
+            $('.technique__man').addClass('technique__man--active')
+            $('.overlay-off').removeClass('overlay-on')
+        }
+        else {
+            if ($('.technique__jcb').hasClass('technique__jcb--active')) {
+                $('.technique__jcb').removeClass('technique__jcb--active')
+                $('.overlay-off').addClass('overlay-on')
+            }
+            else if ($('.technique__autocrane').hasClass('technique__autocrane--active')) {
+                $('.technique__autocrane').removeClass('technique__autocrane--active')
+                $('.overlay-off').addClass('overlay-on')
+            }
+            else if ($('.technique__man').hasClass('technique__man--active')) {
+                $('.technique__man').removeClass('technique__man--active')
+                $('.overlay-off').addClass('overlay-on')
+            }
+        }
     })
 })
