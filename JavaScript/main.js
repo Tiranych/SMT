@@ -32,6 +32,11 @@ $(function () {
         var id = $(this).attr('href'),
             top = $(id).offset().top
         $('body, html').animate({ scrollTop: top }, 800)
+        if ($('.header__top').hasClass('header__top--open')) {
+            $('.header__top').removeClass('header__top--open')
+            $('.overlay-off').addClass('overlay-on')
+            $('.burger').removeClass('burger--close')
+        }
     });
 
     setInterval(() => {
