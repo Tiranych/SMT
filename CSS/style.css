@@ -147,6 +147,11 @@ body, html {
     align-items: center;
 }
 
+.header__tel-box {
+    display: flex;
+    flex-direction: column;
+}
+
 .header__tel {
     font-family: serif;
     font-size: 18px;
@@ -163,7 +168,6 @@ body, html {
 
 .header__button {
     display: block;
-    height: 100%;
     transition: all .3s;
     max-width: 241px;
 }
@@ -404,6 +408,11 @@ h4 {
 
 .contacts__info-item:last-child {
     margin-bottom: 0px;
+}
+
+.contacts__tel-box {
+    display: flex;
+    flex-direction: column;
 }
 
 .contacts__info-link {
