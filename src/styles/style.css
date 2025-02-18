@@ -4,9 +4,9 @@
     font-style: normal;
     src: local("PlayfairDisplay Regular"),
         local("PlayfairDisplay-Regular"),
-        url("/Fonts/PlayfairDisplay-Regular.woff2") format('woff2'),
-        url("/Fonts/PlayfairDisplay-Regular.woff") format('woff'),
-        url("/Fonts/PlayfairDisplay-Regular.eot") format('eot');
+        url("../fonts/PlayfairDisplay-Regular.woff2") format('woff2'),
+        url("../fonts/PlayfairDisplay-Regular.woff") format('woff'),
+        url("../fonts/PlayfairDisplay-Regular.eot") format('eot');
     font-display: swap;
 }
 @font-face {
@@ -14,14 +14,14 @@
     font-weight: 400;
     font-style: normal;
     src:
-        url("/Fonts/Exo2_0_light.woff2") format('woff2'),
-        url("/Fonts/Exo2_0_light.woff") format('woff'),
-        url("/Fonts/Exo2_0_light.eot") format('eot');
+        url("../fonts/Exo2_0_light.woff2") format('woff2'),
+        url("../fonts/Exo2_0_light.woff") format('woff'),
+        url("../fonts/Exo2_0_light.eot") format('eot');
     font-display: swap;
 }
 
 body, html {
-    font-family: "Exo_2", sans-serif;
+    font-family: "PlayfairDisplay", sans-serif;
 }
 
 .wrapper {
@@ -85,7 +85,7 @@ body, html {
 .header {
     margin-bottom: 50px;
     min-height: 591px;
-    background-image: url(/Images/JCB_header.jpg);
+    background-image: url(./assets/images/JCB_header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
