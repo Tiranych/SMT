@@ -85,7 +85,7 @@ body, html {
 .header {
     margin-bottom: 50px;
     min-height: 591px;
-    background-image: url(./assets/images/JCB_header.jpg);
+    background-image: url(../assets/images/header_image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

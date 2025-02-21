@@ -1,15 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
 	entry: path.resolve('./src/index.tsx'),
-	output: {
-		path: path.resolve(__dirname, '../public/build'),
-		filename: 'bundle.js',
-	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: path.resolve('./src/index.html'),
@@ -20,20 +14,12 @@ module.exports = {
 				{ from: 'src/fonts', to: 'fonts' },
 			],
 		}),
-		new CssMinimizerWebpackPlugin(),
 	],
-	optimization: {
-		minimize: true,
-		minimizer: [new CssMinimizerWebpackPlugin(), new TerserPlugin()],
-	},
 	resolve: {
 		alias: {
 			'@components': path.resolve('./src/components'),
 			'@pages': path.resolve('./src/pages'),
 			'@utils': path.resolve('./src/utils'),
-			'@hooks': path.resolve('./src/hooks'),
-			'@store': path.resolve('./src/store'),
-			'@services': path.resolve('./src/services'),
 			'@assets': path.resolve('./src/assets'),
 		},
 		extensions: ['.tsx', '.ts', '.js'],
@@ -41,11 +27,9 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.(ts|tsx)$/,
+				test: /\.tsx?$/,
 				exclude: /node_modules/,
-				use: {
-					loader: 'ts-loader',
-				},
+				use: 'ts-loader',
 			},
 			{
 				test: /\.(js|jsx)$/,
@@ -67,11 +51,20 @@ module.exports = {
 					{
 						loader: 'file-loader',
 						options: {
-							name: '[name].[ext]',
+							name: '[path][name].[ext]',
 						},
 					},
 				],
 			},
 		],
+	},
+	devServer: {
+		open: true,
+		hot: true,
+	},
+	devtool: 'eval',
+	watch: true,
+	watchOptions: {
+		ignored: ['/node_modules/', '/public/'],
 	},
 };
