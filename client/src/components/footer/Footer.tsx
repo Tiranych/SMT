@@ -1,5 +1,11 @@
 import React from 'react';
 
+import { Container } from '@components/shared/container';
+
 export const Footer = () => {
-	return <div>Footer</div>;
+	return (
+		<div>
+			<Container>Footer</Container>
+		</div>
+	);
 };

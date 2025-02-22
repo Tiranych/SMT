@@ -17,7 +17,7 @@ module.exports = {
 		new CopyWebpackPlugin({
 			patterns: [
 				{ from: 'src/styles', to: 'styles' },
-				{ from: 'src/fonts', to: 'fonts' },
+				{ from: 'src/assets', to: 'assets' },
 			],
 		}),
 		new CssMinimizerWebpackPlugin(),
@@ -31,7 +31,6 @@ module.exports = {
 			'@components': path.resolve('./src/components'),
 			'@pages': path.resolve('./src/pages'),
 			'@utils': path.resolve('./src/utils'),
-			'@assets': path.resolve('./src/assets'),
 		},
 		extensions: ['.tsx', '.ts', '.js'],
 	},
@@ -49,9 +48,6 @@ module.exports = {
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader',
-					options: {
-						presets: ['@babel/preset-env', '@babel/preset-react'],
-					},
 				},
 			},
 			{

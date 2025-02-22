@@ -1,6 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
+
+const styledComponentsTransformer = createStyledComponentsTransformer();
 
 module.exports = {
 	entry: path.resolve('./src/index.tsx'),
@@ -10,8 +13,8 @@ module.exports = {
 		}),
 		new CopyWebpackPlugin({
 			patterns: [
+				{ from: 'src/assets', to: 'assets' },
 				{ from: 'src/styles', to: 'styles' },
-				{ from: 'src/fonts', to: 'fonts' },
 			],
 		}),
 	],
@@ -20,7 +23,6 @@ module.exports = {
 			'@components': path.resolve('./src/components'),
 			'@pages': path.resolve('./src/pages'),
 			'@utils': path.resolve('./src/utils'),
-			'@assets': path.resolve('./src/assets'),
 		},
 		extensions: ['.tsx', '.ts', '.js'],
 	},
@@ -29,16 +31,22 @@ module.exports = {
 			{
 				test: /\.tsx?$/,
 				exclude: /node_modules/,
-				use: 'ts-loader',
+				use: [
+					{
+						loader: 'ts-loader',
+						options: {
+							getCustomTransformers: () => ({
+								before: [styledComponentsTransformer],
+							}),
+						},
+					},
+				],
 			},
 			{
 				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader',
-					options: {
-						presets: ['@babel/preset-env', '@babel/preset-react'],
-					},
 				},
 			},
 			{
@@ -63,7 +71,6 @@ module.exports = {
 		hot: true,
 	},
 	devtool: 'eval',
-	watch: true,
 	watchOptions: {
 		ignored: ['/node_modules/', '/public/'],
 	},

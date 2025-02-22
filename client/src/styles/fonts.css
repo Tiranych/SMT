@@ -1,42 +1,4 @@
-@font-face {
-    font-family: "PlayfairDisplay";
-    font-weight: 400;
-    font-style: normal;
-    src: local("PlayfairDisplay Regular"),
-        local("PlayfairDisplay-Regular"),
-        url("../fonts/PlayfairDisplay-Regular.woff2") format('woff2'),
-        url("../fonts/PlayfairDisplay-Regular.woff") format('woff'),
-        url("../fonts/PlayfairDisplay-Regular.eot") format('eot');
-    font-display: swap;
-}
-@font-face {
-    font-family: "Exo_2";
-    font-weight: 400;
-    font-style: normal;
-    src:
-        url("../fonts/Exo2_0_light.woff2") format('woff2'),
-        url("../fonts/Exo2_0_light.woff") format('woff'),
-        url("../fonts/Exo2_0_light.eot") format('eot');
-    font-display: swap;
-}
-
-body, html {
-    font-family: "PlayfairDisplay", sans-serif;
-}
-
-.wrapper {
-    min-width: 100%;
-    min-height: 100%;
-    overflow: hidden;
-}
-
-.container {
-    max-width: 1340px;
-    padding: 0 20px;
-    margin: 0 auto;
-}
-
-.button {
+/* .button {
     font-size: 20px;
     padding: 15px 30px;
     color: rgba(255, 197, 6, 0.884);
@@ -78,9 +40,6 @@ body, html {
 .main__contacts {
     padding: 50px 0;
 }
-
-/*-------------------------HEADER------------------------*/
-/*-------------------------HEADER------------------------*/
 
 .header {
     margin-bottom: 50px;
@@ -205,12 +164,6 @@ body, html {
     max-width: 250px;
     margin-bottom: 60px;
 }
-
-/*------------------------------MAIN-----------------------------*/
-/*------------------------------MAIN-----------------------------*/
-
-/*-------------------------TECHNIQUE------------------------*/
-/*-------------------------TECHNIQUE------------------------*/
 
 .technique__heading {
     margin-bottom: 30px;
@@ -371,8 +324,6 @@ h4 {
     font-weight: bold;
 }
 
-/*-------------------------ABOUT US------------------------*/
-/*-------------------------ABOUT US------------------------*/
 
 .about_us__heading {
     margin-bottom: 30px;
@@ -387,8 +338,6 @@ h4 {
     margin-bottom: 0px;
 }
 
-/*-------------------------CONTACTS------------------------*/
-/*-------------------------CONTACTS------------------------*/
 
 .contacts {
     height: 85vh;
@@ -437,8 +386,6 @@ h4 {
     color: rgba(255, 197, 6, 0.884);
 }
 
-/*-------------------------FOOTER------------------------*/
-/*-------------------------FOOTER------------------------*/
 
 .footer__inner {
     background: rgba(30, 27, 27, 0.98);
@@ -464,8 +411,6 @@ h4 {
     margin-bottom: 0px;
 }
 
-/*-------------------------YANDEX MAPS------------------------*/
-/*-------------------------YANDEX MAPS------------------------*/
 
 .map {
     width: 100%;
@@ -483,8 +428,6 @@ h4 {
     display: none;
 }
 
-/*-------------------------MEDIA-------------------------*/
-/*-------------------------MEDIA-------------------------*/
 @media (max-width: 1500px) {
     .header {
         min-height: 400px;
@@ -698,7 +641,6 @@ h4 {
         padding-top: 50px;
     }
 
-    /*------------------------------------------*/
     .technique__jcb--active {
         width: 300px;
         height: 300px;
@@ -752,7 +694,6 @@ h4 {
         display: none;
     }
 
-    /*------------------------------------------*/
     .contacts__info-list {
         width: 250px;
         height: 200px;
@@ -789,7 +730,6 @@ h4 {
         font-size: 18px;
         margin-bottom: 30px;
     }
-    /*------------------------------------------*/
     .heading {
         font-size: 24px;
     }
@@ -809,12 +749,10 @@ h4 {
     .technique__model {
         margin: 10px 0 5px;
     }
-    /*-----------------------------------------*/
     .contacts {
         height: 110vh;
     }
 
-    /*-----------------------------------------*/
     .footer__content {
         flex-direction: column;
     }
@@ -822,4 +760,4 @@ h4 {
     .footer__logo {
         margin-bottom: 20px;
     }
-}
+} */

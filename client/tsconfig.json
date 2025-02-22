@@ -9,7 +9,6 @@
 			"@components/*": ["components/*"],
 			"@pages/*": ["pages/*"],
 			"@utils/*": ["utils/*"],
-			"@assets/*": ["assets/*"]
 		},
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,

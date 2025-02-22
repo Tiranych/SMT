@@ -4,12 +4,17 @@ import { Footer } from '@components/footer';
 import { Header } from '@components/header';
 import { Main } from '@components/main';
 
+import { Global, Wrapper } from './App.styled';
+
 const App = () => {
 	return (
 		<>
-			<Header />
-			<Main />
-			<Footer />
+			<Global />
+			<Wrapper>
+				<Header />
+				<Main />
+				<Footer />
+			</Wrapper>
 		</>
 	);
 };

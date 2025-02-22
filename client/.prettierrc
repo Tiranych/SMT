@@ -13,7 +13,6 @@
 		"^@components",
 		"^@pages",
 		"^@utils",
-		"^@assets",
 		"(?=reset)",
 		"(?=.css)",
 		"^[./]"
