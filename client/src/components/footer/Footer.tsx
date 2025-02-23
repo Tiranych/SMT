@@ -29,7 +29,7 @@ export const Footer = () => {
 								<Anchor href='#technique'>Спецтехника</Anchor>
 							</Item>
 							<Item>
-								<Anchor href='#about_us'>О нас</Anchor>
+								<Anchor href='#about-us'>О нас</Anchor>
 							</Item>
 							<Item>
 								<Anchor href='#contacts'>Контакты</Anchor>

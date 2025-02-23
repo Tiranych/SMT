@@ -1,5 +1,6 @@
-import styled, { createGlobalStyle } from 'styled-components'
-import { mainBackgroundColor, mainColor } from '@utils/variables'
+import styled, { createGlobalStyle } from 'styled-components';
+
+import { mainBackgroundColor, mainColor } from '@utils/variables';
 
 export const Global = createGlobalStyle`
     body, html {
@@ -9,11 +10,11 @@ export const Global = createGlobalStyle`
         color: ${mainColor};
         background-color: ${mainBackgroundColor};
     }
-`
+`;
 
 export const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-`
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+`;
