@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
-import { headerBackgroundColor, mainColor } from '@utils/variables'
+import { mainBackgroundColor, mainColor } from '@utils/variables'
 
 export const Global = createGlobalStyle`
     body, html {
@@ -7,7 +7,7 @@ export const Global = createGlobalStyle`
         font-weight: 400;
         font-size: 16px;
         color: ${mainColor};
-        background-color: ${headerBackgroundColor};
+        background-color: ${mainBackgroundColor};
     }
 `
 

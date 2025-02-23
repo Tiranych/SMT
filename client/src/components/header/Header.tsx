@@ -3,16 +3,20 @@ import React from 'react';
 import { Container } from '@components/shared/container';
 
 import {
+	Advantages,
 	Anchor,
 	Box,
 	Button,
+	CompanyName,
 	Content,
+	HeaderBody,
+	HeaderTop,
 	Icons,
 	Img,
-	Inner,
 	Item,
 	LogoBox,
 	Menu,
+	Subtitle,
 	Tel,
 	Title,
 	Wrapper,
@@ -22,10 +26,10 @@ export const Header = () => {
 	return (
 		<Wrapper>
 			<Container>
-				<Inner>
+				<HeaderTop>
 					<LogoBox href='/'>
 						<Img src='../../assets/icons/favicon_white.svg' alt='Logo' />
-						<Title>Строймегатранс</Title>
+						<CompanyName>Строймегатранс</CompanyName>
 					</LogoBox>
 					<Menu>
 						<Item>
@@ -59,7 +63,20 @@ export const Header = () => {
 						</Content>
 						<Button href='#contacts'>Свяжитесь с нами</Button>
 					</Box>
-				</Inner>
+				</HeaderTop>
+				<HeaderBody>
+					<Title>Аренда спецтехники по Москве и Моcковской области</Title>
+					<Advantages>
+						<Subtitle>
+							Cрочная подача спецтехники с самыми опытными водителями.
+						</Subtitle>
+						<Subtitle>
+							Собственный автопарк техники для любых работ: автокраны, экскаваторы и
+							манипуляторы.
+						</Subtitle>
+						<Subtitle>Мы на рынке уже 20 лет!</Subtitle>
+					</Advantages>
+				</HeaderBody>
 			</Container>
 		</Wrapper>
 	);

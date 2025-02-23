@@ -9,7 +9,7 @@ export const Wrapper = styled.header`
     padding: 50px 0;
 `
 
-export const Inner = styled.div`
+export const HeaderTop = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,7 +26,7 @@ export const Img = styled.img`
     max-height: 32px;
 `
 
-export const Title = styled.span`
+export const CompanyName = styled.span`
     font-size: 28px;
     margin-left: 10px;
     margin-top: 6px;
@@ -79,8 +79,8 @@ export const Icons = styled.div`
 export const Button = styled.a`
     display: block;
     transition: transform .3s;
-    max-width: 241px;
-    max-height: 56px;
+    max-width: 240px;
+    max-height: 53px;
 
     font-size: 20px;
     padding: 15px 30px;
@@ -88,9 +88,32 @@ export const Button = styled.a`
     background: rgba(0, 0, 0, 0.856);
     border-radius: 12px;
     border: 2px solid;
-    text-align: center;
 
     &:hover {
         transform: scale(1.1);
     }
+`
+
+export const HeaderBody = styled.div`
+    padding: 80px 0;
+`
+
+export const Title = styled.h1`
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: 700;
+    max-width: 600px;
+    padding-bottom: 30px;
+`
+
+export const Advantages = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+`
+
+export const Subtitle = styled.h2`
+    font-size: 20px;
+    line-height: 110%;
+    max-width: 380px;
 `

@@ -3,6 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
+
+const styledComponentsTransformer = createStyledComponentsTransformer();
 
 module.exports = {
 	entry: path.resolve('./src/index.tsx'),
@@ -39,9 +42,16 @@ module.exports = {
 			{
 				test: /\.(ts|tsx)$/,
 				exclude: /node_modules/,
-				use: {
-					loader: 'ts-loader',
-				},
+				use: [
+					{
+						loader: 'ts-loader',
+						options: {
+							getCustomTransformers: () => ({
+								before: [styledComponentsTransformer],
+							}),
+						},
+					},
+				],
 			},
 			{
 				test: /\.(js|jsx)$/,
