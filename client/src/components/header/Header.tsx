@@ -61,7 +61,14 @@ export const Header = () => {
 								</a>
 							</Icons>
 						</Content>
-						<Button href='#contacts'>Свяжитесь с нами</Button>
+						<div>
+							<Button
+								href='https://yandex.ru/business/widget/request/company/46134038520'
+								target='_blank'
+							>
+								Заказать звонок
+							</Button>
+						</div>
 					</Box>
 				</HeaderTop>
 				<HeaderBody>

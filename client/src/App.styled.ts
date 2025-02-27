@@ -9,6 +9,8 @@ export const Global = createGlobalStyle`
         font-size: 16px;
         color: ${mainColor};
         background-color: ${mainBackgroundColor};
+        font-variant-numeric: lining-nums;
+        scroll-behavior: smooth;
     }
 `;
 

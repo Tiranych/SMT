@@ -10,11 +10,9 @@ import { Technique } from './technique';
 export const Main = () => {
 	return (
 		<Wrapper>
-			<Container>
-				<Technique title='Спецтехника' />
-				<AboutUs title='О нас' />
-				<Contacts title='Контакты' />
-			</Container>
+			<Technique title='Спецтехника' />
+			<AboutUs title='О нас' />
+			<Contacts title='Контакты' />
 		</Wrapper>
 	);
 };

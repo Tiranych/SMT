@@ -1,16 +1,16 @@
 import React from 'react';
 
+import { Container } from '@components/shared/container';
 import { Section } from '@components/shared/section';
 import { Title } from '@components/shared/title';
+import { SectionComponentProps } from '@components/shared/types';
 
-type TechniqueProps = {
-	title: string;
-};
-
-export const Technique = ({ title }: TechniqueProps) => {
+export const Technique = ({ title }: SectionComponentProps) => {
 	return (
 		<Section id='technique'>
-			<Title title={title} />
+			<Container>
+				<Title title={title} />
+			</Container>
 		</Section>
 	);
 };

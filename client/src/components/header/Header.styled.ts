@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { buttonBackgroundColor, buttonBorderColor } from '@utils/variables';
+
 export const Wrapper = styled.header`
 	background:
 		linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)),
@@ -47,13 +49,16 @@ export const Item = styled.li`
 export const Anchor = styled.a`
 	transition:
 		background 0.5s,
+		border-color 0.5s,
 		color 0.5s;
 	padding: 5px 10px;
 	border-radius: 12px;
+	border: 2px solid transparent;
 
 	&:hover {
-		background: rgba(0, 0, 0, 0.856);
-		color: rgba(255, 197, 6, 0.884);
+		border-color: ${buttonBorderColor};
+		background: ${buttonBackgroundColor};
+		color: ${buttonBorderColor};
 	}
 `;
 
@@ -81,32 +86,36 @@ export const Icons = styled.div`
 `;
 
 export const Button = styled.a`
-	display: block;
-	transition: transform 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	max-width: 240px;
-	max-height: 53px;
-
+	max-height: 55px;
 	font-size: 20px;
 	padding: 15px 30px;
-	color: rgba(255, 197, 6, 0.884);
-	background: rgba(0, 0, 0, 0.856);
+	color: ${buttonBorderColor};
+	background: ${buttonBackgroundColor};
 	border-radius: 12px;
 	border: 2px solid;
+	transition: transform 0.3s;
 
 	&:hover {
 		transform: scale(1.1);
 	}
+
+	& + & {
+		margin-top: 10px;
+	}
 `;
 
 export const HeaderBody = styled.div`
-	padding: 80px 0;
+	padding-top: 30px;
 `;
 
 export const Title = styled.h1`
-	font-size: 50px;
-	line-height: 55px;
+	font-size: 70px;
 	font-weight: 700;
-	max-width: 600px;
+	max-width: 900px;
 	padding-bottom: 30px;
 `;
 
@@ -118,6 +127,6 @@ export const Advantages = styled.div`
 
 export const Subtitle = styled.h3`
 	font-size: 20px;
-	line-height: 110%;
+	line-height: 125%;
 	max-width: 380px;
 `;
