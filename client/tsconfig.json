@@ -6,6 +6,7 @@
 		"jsx": "react",
 		"baseUrl": "./src",
 		"paths": {
+			"@assets/*": ["assets/*"],
 			"@components/*": ["components/*"],
 			"@pages/*": ["pages/*"],
 			"@utils/*": ["utils/*"],

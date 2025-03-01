@@ -20,6 +20,7 @@ module.exports = {
 	],
 	resolve: {
 		alias: {
+			'@assets': path.resolve('./src/assets'),
 			'@components': path.resolve('./src/components'),
 			'@pages': path.resolve('./src/pages'),
 			'@utils': path.resolve('./src/utils'),

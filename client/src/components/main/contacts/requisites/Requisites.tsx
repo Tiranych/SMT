@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Box, CompanyName, Inner, List, Subtitle, Text, Value } from './Requisites.styled';
+import { Box, CompanyName, List, Subtitle, Text, Value } from './Requisites.styled';
 import { data } from './mock';
 
 export const Requisites = () => {
 	return (
-		<Inner>
+		<div>
 			<Subtitle>Наши реквизиты</Subtitle>
 			<CompanyName>{data.companyName}</CompanyName>
 			<List>
@@ -52,6 +52,6 @@ export const Requisites = () => {
 					</Box>
 				</div>
 			</List>
-		</Inner>
+		</div>
 	);
 };
