@@ -8,6 +8,5 @@ export type TData = {
 	paymentAccount: number;
 	correspondentAccount: number;
 	bank: string;
-	mailingAddress: string;
 	registeredOffice: string;
 };

@@ -17,10 +17,6 @@ export const Requisites = () => {
 						</Value>
 					</Box>
 					<Box>
-						<Text>Почтовый адрес</Text>
-						<Value>{data.mailingAddress}</Value>
-					</Box>
-					<Box>
 						<Text>Юридический адрес</Text>
 						<Value>{data.registeredOffice}</Value>
 					</Box>
