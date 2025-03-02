@@ -20,7 +20,7 @@ export const Footer = () => {
 			<Container>
 				<Wrapper>
 					<LogoBox href='/'>
-						<Logo src='../../assets/icons/favicon_white.svg' alt='Logo' />
+						<Logo src='./assets/icons/favicon_white.svg' alt='Logo' />
 						<CompanyName>Строймегатранс</CompanyName>
 					</LogoBox>
 					<div>
@@ -37,16 +37,10 @@ export const Footer = () => {
 						</Menu>
 						<Icons>
 							<a href='https://wa.me/89255856361'>
-								<img
-									src='../../assets/icons/whatsapp-icon.svg'
-									alt='Whatsapp icon'
-								/>
+								<img src='./assets/icons/whatsapp-icon.svg' alt='Whatsapp icon' />
 							</a>
 							<a href='https://t.me/susannakrimyan'>
-								<img
-									src='../../assets/icons/telegram-icon.svg'
-									alt='Telegram icon'
-								/>
+								<img src='./assets/icons/telegram-icon.svg' alt='Telegram icon' />
 							</a>
 						</Icons>
 					</div>

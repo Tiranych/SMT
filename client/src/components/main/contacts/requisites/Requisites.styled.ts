@@ -13,9 +13,13 @@ export const CompanyName = styled.h4`
 
 export const List = styled.ul`
 	display: flex;
-	gap: 30px;
+	gap: 30px 100px;
 	justify-content: space-between;
 	flex-wrap: wrap;
+`;
+
+export const Item = styled.div`
+	flex-grow: 1;
 `;
 
 export const Box = styled.li`
@@ -30,6 +34,10 @@ export const Box = styled.li`
 	&:last-child {
 		margin-bottom: 0;
 	}
+
+	@media (max-width: 1200px) {
+		gap: 0 30px;
+	}
 `;
 
 export const Text = styled.span`
@@ -39,6 +47,10 @@ export const Text = styled.span`
 	& + & {
 		margin-top: 10px;
 	}
+
+	@media (max-width: 450px) {
+		font-size: 16px;
+	}
 `;
 
 export const Value = styled.span`
@@ -47,4 +59,9 @@ export const Value = styled.span`
 	max-width: 300px;
 	text-align: end;
 	word-break: auto-phrase;
+
+	@media (max-width: 450px) {
+		font-size: 16px;
+		line-height: 20px;
+	}
 `;

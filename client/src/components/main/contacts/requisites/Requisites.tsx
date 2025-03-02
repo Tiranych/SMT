@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, CompanyName, List, Subtitle, Text, Value } from './Requisites.styled';
+import { Box, CompanyName, Item, List, Subtitle, Text, Value } from './Requisites.styled';
 import { data } from './mock';
 
 export const Requisites = () => {
@@ -9,7 +9,7 @@ export const Requisites = () => {
 			<Subtitle>Наши реквизиты</Subtitle>
 			<CompanyName>{data.companyName}</CompanyName>
 			<List>
-				<div>
+				<Item>
 					<Box>
 						<Text>ИНН / КПП</Text>
 						<Value>
@@ -24,8 +24,8 @@ export const Requisites = () => {
 						<Text>Юридический адрес</Text>
 						<Value>{data.registeredOffice}</Value>
 					</Box>
-				</div>
-				<div>
+				</Item>
+				<Item>
 					<Box>
 						<Text>Банк</Text>
 						<Value>{data.bank}</Value>
@@ -50,7 +50,7 @@ export const Requisites = () => {
 						<Text>ОГРН</Text>
 						<Value>{data.ogrn}</Value>
 					</Box>
-				</div>
+				</Item>
 			</List>
 		</div>
 	);

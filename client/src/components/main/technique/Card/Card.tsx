@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Img, Subtitle, Text } from './Card.styled';
+import { Img, Item, Subtitle, Text } from './Card.styled';
 import { CardProps } from './types';
 
 export const Card = ({ technique }: CardProps) => {
 	return (
-		<li>
+		<Item>
 			<Img src={technique.image} alt='Фотография спецтехники' />
 			<Subtitle>{technique.type}</Subtitle>
 			<Text $isStrong={false} $isBig={true}>
@@ -14,6 +14,6 @@ export const Card = ({ technique }: CardProps) => {
 			<Text $isStrong={true} $isBig={false}>
 				{technique.price}
 			</Text>
-		</li>
+		</Item>
 	);
 };

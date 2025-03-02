@@ -11,6 +11,12 @@ export const Wrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	gap: 20px;
+
+	@media (max-width: 450px) {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
 `;
 
 export const LogoBox = styled.a`
@@ -31,8 +37,16 @@ export const CompanyName = styled.span`
 
 export const Menu = styled.ul`
 	display: flex;
-	gap: 0 20px;
+	gap: 20px;
 	font-size: 18px;
+
+	@media (max-width: 600px) {
+		flex-direction: column;
+	}
+
+	@media (max-width: 450px) {
+		flex-direction: row;
+	}
 `;
 
 export const Item = styled.li``;
@@ -45,4 +59,13 @@ export const Icons = styled.div`
 	align-items: center;
 	margin-top: 5px;
 	gap: 0 5px;
+
+	@media (max-width: 600px) {
+		justify-content: flex-start;
+		margin-top: 10px;
+	}
+
+	@media (max-width: 450px) {
+		justify-content: center;
+	}
 `;
