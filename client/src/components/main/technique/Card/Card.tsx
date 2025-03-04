@@ -8,10 +8,10 @@ export const Card = ({ technique }: CardProps) => {
 		<Item>
 			<Img src={technique.image} alt='Фотография спецтехники' />
 			<Subtitle>{technique.type}</Subtitle>
-			<Text $isStrong={false} $isBig={true}>
+			<Text $isStrong={false} $isBig={false}>
 				{technique.name}
 			</Text>
-			<Text $isStrong={true} $isBig={false}>
+			<Text $isStrong={true} $isBig={true}>
 				{technique.price}
 			</Text>
 		</Item>

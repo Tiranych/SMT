@@ -32,7 +32,7 @@ export const Menu = ({ isOpen, setIsOpen }: MenuProps) => {
 					<Tel href='tel:89255856361'>+7 (925) 585-63-61</Tel>
 					<Tel href='tel:89266007707'>+7 (926) 600-77-07</Tel>
 					<Icons>
-						<a href='https://wa.me/89255856361'>
+						<a href='https://wa.me/+79255856361'>
 							<img src='./assets/icons/whatsapp-icon.svg' alt='Whatsapp icon' />
 						</a>
 						<a href='https://t.me/susannakrimyan'>

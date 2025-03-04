@@ -1,15 +1,19 @@
 import styled from 'styled-components';
 
+import { footerBackgroundColor } from '@utils/variables';
+
 export const Button = styled.button<{ $isClose: boolean }>`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	position: relative;
+	position: fixed;
 	z-index: 200;
 	right: 5px;
 	width: 60px;
 	height: 60px;
+	border: 1px solid;
+	border-color: ${footerBackgroundColor};
 	border-radius: 50%;
 	transition: all 0.3s;
 

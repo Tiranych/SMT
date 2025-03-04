@@ -36,7 +36,7 @@ export const Footer = () => {
 							</Item>
 						</Menu>
 						<Icons>
-							<a href='https://wa.me/89255856361'>
+							<a href='https://wa.me/+79255856361'>
 								<img src='./assets/icons/whatsapp-icon.svg' alt='Whatsapp icon' />
 							</a>
 							<a href='https://t.me/susannakrimyan'>

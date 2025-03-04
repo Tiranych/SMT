@@ -43,7 +43,7 @@ export const Img = styled.img`
 `;
 
 export const Subtitle = styled.p`
-	padding: 10px 0;
+	padding: 10px 0 5px;
 	font-size: 32px;
 
 	@media (max-width: 400px) {
@@ -53,6 +53,6 @@ export const Subtitle = styled.p`
 
 export const Text = styled.p<{ $isStrong: boolean; $isBig: boolean }>`
 	padding: 5px 0;
-	font-size: ${({ $isBig }) => ($isBig ? '24px' : '18px')};
+	font-size: ${({ $isBig }) => ($isBig ? '24px' : '20px')};
 	font-weight: ${({ $isStrong }) => ($isStrong ? '700' : '400')};
 `;
