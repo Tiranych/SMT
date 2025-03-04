@@ -48,6 +48,6 @@ export const Button = styled.button<{ $isClose: boolean }>`
 	@media (max-width: 400px) {
 		width: 50px;
 		height: 50px;
-		right: -10px;
+		right: 5px;
 	}
 `;
