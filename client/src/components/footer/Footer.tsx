@@ -20,7 +20,7 @@ export const Footer = () => {
 			<Container>
 				<Wrapper>
 					<LogoBox href='/'>
-						<Logo src='./assets/icons/favicon_white.svg' alt='Logo' />
+						<Logo src='./assets/icons/favicon-white.svg' alt='Logo' />
 						<CompanyName>Строймегатранс</CompanyName>
 					</LogoBox>
 					<div>

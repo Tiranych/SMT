@@ -29,7 +29,7 @@ export const Header = () => {
 			<Container>
 				<HeaderTop>
 					<LogoBox href='/'>
-						<Img src='./assets/icons/favicon_white.svg' alt='Logo' />
+						<Img src='./assets/icons/favicon-white.svg' alt='Logo' />
 						<CompanyName>Строймегатранс</CompanyName>
 					</LogoBox>
 					{isMobile && <Burger isOpen={isOpen} setIsOpen={setIsOpen} />}
