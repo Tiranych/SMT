@@ -29,9 +29,9 @@ export const Wrapper = styled.div<{ $isOpen: boolean }>`
 	}
 `;
 
-export const Inner = styled.ul<{ $isOpen: boolean }>`
+export const Inner = styled.ul<{ $isMobile: boolean }>`
 	display: flex;
-	flex-direction: ${({ $isOpen }) => ($isOpen ? 'column' : 'row')};
+	flex-direction: ${({ $isMobile }) => ($isMobile ? 'column' : 'row')};
 	gap: 30px 20px;
 	align-items: center;
 `;

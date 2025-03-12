@@ -3,14 +3,14 @@ import React from 'react';
 import { Anchor, Box, Button, Content, Icons, Inner, Item, Tel, Wrapper } from './Menu.styled';
 import { MenuProps } from './types';
 
-export const Menu = ({ isOpen, setIsOpen }: MenuProps) => {
+export const Menu = ({ isMobile, isOpen, setIsOpen }: MenuProps) => {
 	const handleClick = () => {
 		setIsOpen((prev) => !prev);
 	};
 
 	return (
 		<Wrapper $isOpen={isOpen}>
-			<Inner $isOpen={isOpen}>
+			<Inner $isMobile={isMobile}>
 				<Item>
 					<Anchor href='#technique' onClick={handleClick}>
 						Спецтехника

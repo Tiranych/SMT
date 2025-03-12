@@ -33,7 +33,7 @@ export const Header = () => {
 						<CompanyName>Строймегатранс</CompanyName>
 					</LogoBox>
 					{isMobile && <Burger isOpen={isOpen} setIsOpen={setIsOpen} />}
-					<Menu isOpen={isOpen} setIsOpen={setIsOpen} />
+					<Menu isMobile={isMobile} isOpen={isOpen} setIsOpen={setIsOpen} />
 				</HeaderTop>
 				<HeaderBody>
 					<Title>Аренда спецтехники по Москве и Моcковской области</Title>
