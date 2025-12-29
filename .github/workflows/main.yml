@@ -23,6 +23,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: install_dependencies
-      run: npm ci
+      run: |
+        cd client
+        npm ci
     - name: build
       run: npm run build
