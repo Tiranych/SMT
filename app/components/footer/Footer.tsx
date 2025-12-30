@@ -8,7 +8,7 @@ export const Footer = () => {
 			<Container>
 				<div className={Wrapper}>
 					<a className={LogoBox} href='/'>
-						<img className={Logo} src='./assets/icons/favicon-white.svg' alt='Logo' />
+						<img className={Logo} src='/assets/icons/favicon-white.svg' alt='Logo' />
 						<span className={CompanyName}>Строймегатранс</span>
 					</a>
 					<div>
