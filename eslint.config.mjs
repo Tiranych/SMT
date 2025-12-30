@@ -9,7 +9,7 @@ export default tseslint.config(
 	eslintConfigPrettier,
 	...tseslint.configs.recommended,
 	{
-		ignores: ['node_modules/', 'public/', '*.config.js', '*.d.ts'],
+		ignores: ['node_modules/', 'public/', '*.config.js', '*.d.ts', '.next/', 'out/'],
 	},
 	{
 		plugins: {
