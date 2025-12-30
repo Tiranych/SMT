@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from 'react';
 
-import Image from 'next/image';
-
 import { Container } from '@components/shared/container';
 
 import {
@@ -34,13 +32,7 @@ export const Header = () => {
 			<Container>
 				<div className={HeaderTop}>
 					<a className={LogoBox} href='/'>
-						<Image
-							width={43}
-							height={43}
-							className={Img}
-							src='/assets/icons/favicon-white.svg'
-							alt='Logo'
-						/>
+						<img className={Img} src='/assets/icons/favicon-white.svg' alt='Logo' />
 						<span className={CompanyName}>Строймегатранс</span>
 					</a>
 					{isMobile && <Burger isOpen={isOpen} setIsOpen={setIsOpen} />}

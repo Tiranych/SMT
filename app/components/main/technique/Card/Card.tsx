@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import { Img, Item, Subtitle, Text } from './Card.css';
 
 import { CardProps } from './types';
@@ -7,13 +5,7 @@ import { CardProps } from './types';
 export const Card = ({ technique }: CardProps) => {
 	return (
 		<li className={Item}>
-			<Image
-				width={1600}
-				height={1200}
-				className={Img}
-				src={technique.image}
-				alt='Фотография спецтехники'
-			/>
+			<img className={Img} src={technique.image} alt='Фотография спецтехники' />
 			<p className={Subtitle}>{technique.type}</p>
 			<p
 				className={`${Text({

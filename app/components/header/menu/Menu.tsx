@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import { Anchor, Box, Button, Content, Icons, Inner, Item, Tel, Wrapper } from './Menu.css';
 
 import { MenuProps } from './types';
@@ -38,20 +36,10 @@ export const Menu = ({ isMobile, isOpen, setIsOpen }: MenuProps) => {
 					</a>
 					<div className={Icons}>
 						<a href='https://wa.me/+79255856361'>
-							<Image
-								width={24}
-								height={24}
-								src='/assets/icons/whatsapp-icon.svg'
-								alt='Whatsapp icon'
-							/>
+							<img src='/assets/icons/whatsapp-icon.svg' alt='Whatsapp icon' />
 						</a>
 						<a href='https://t.me/susannakrimyan'>
-							<Image
-								width={24}
-								height={24}
-								src='/assets/icons/telegram-icon.svg'
-								alt='Telegram icon'
-							/>
+							<img src='/assets/icons/telegram-icon.svg' alt='Telegram icon' />
 						</a>
 					</div>
 				</div>
