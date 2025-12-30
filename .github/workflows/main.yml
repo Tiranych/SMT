@@ -7,7 +7,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  install_dependencies:
+  full:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -18,51 +18,17 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: |
-          npm ci
-  
-  code-fix:
-    runs-on: ubuntu-latest
-    needs: install_dependencies
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Launch eslint fix
-        run: |
-          npm run lint:fix
-  
-  build:
-    runs-on: ubuntu-latest
-    needs: code-fix
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Build project
-        run: |
-          npm run build
-          
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.event_name == 'push'
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Deploy to Beget
+      - name: install_dependencies
+        run: npm ci
+      
+      - name: code-fix
+        run: npm run lint:fix
+      
+      - name: build
+        run: npm run build
+      
+      - name: deploy
+        if: github.event_name == 'push'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.FTP_HOST }}
