@@ -1,42 +1,39 @@
 name: NodeJS with Webpack
-
 on:
+  workflow_dispatch:
   push:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
 jobs:
-  build:
+  full:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [20.x]
-
     steps:
-    - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-    - name: install_dependencies
-      run: |
-        cd client
-        npm ci
-    - name: build
-      run: |
-        cd client
-        npm run build
-    - name: deploy
-      if: github.event_name == 'push'
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.6
-      with:
-        server: ${{ secrets.FTP_HOST }}
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASS }}
-        local-dir: client/public/
-        server-dir: smt/public_html/
-        protocol: ftps
+      - name: install_dependencies
+        run: npm ci
+      
+      - name: code-fix
+        run: npm run lint:fix
+      
+      - name: build
+        run: npm run build
+      
+      - name: deploy
+        if: github.event_name == 'push'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          local-dir: out/
+          server-dir: smt/public_html/
+          protocol: ftps
