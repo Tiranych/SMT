@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-import { getReviews } from '@api/reviews/route';
+import { getReviews } from '@services/reviews';
 
 import { Container } from '@components/shared/container';
 import { Section } from '@components/shared/section';
