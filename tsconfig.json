@@ -6,6 +6,9 @@
     "jsx": "react-jsx",
     "baseUrl": "./app",
     "paths": {
+      "@api/*": [
+        "api/*"
+      ],
       "@components/*": [
         "components/*"
       ],
