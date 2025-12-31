@@ -59,7 +59,7 @@ export const Reviews = ({ title }: SectionComponentProps) => {
 								</p>
 							</div>
 							<div>
-								<div className={Rate}>{getRateStars(4)}</div>
+								<div className={Rate}>{getRateStars(5)}</div>
 								<div className={Details}>
 									<p>Даниил К.</p>
 									<p>03.03.2025</p>
