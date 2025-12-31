@@ -32,11 +32,10 @@ jobs:
       
       - name: deploy
         if: github.event_name == 'push'
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
-          local-dir: out/
-          server-dir: smt/public_html/
-          protocol: ftps
+          uses: appleboy/scp-action@v0.1.7
+          with:
+            host: ${{ secrets.SSH_HOST }}
+            username: ${{ secrets.SSH_USER }}
+            key: ${{ secrets.SSH_KEY }}
+            source: out/
+            target: /var/www/stroymegatrans.ru/html
