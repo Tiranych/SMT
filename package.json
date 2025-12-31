@@ -5,7 +5,7 @@
   "scripts": {
     "start": "next start",
     "dev": "next dev --webpack",
-    "build": "next build --webpack && next export",
+    "build": "next build --webpack",
     "lint": "eslint --ext .js,.ts,.tsx",
     "lint:fix": "eslint --fix --ext .js,.ts,.tsx",
     "ts-check": "tsc --noEmit"

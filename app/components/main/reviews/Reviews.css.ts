@@ -11,6 +11,15 @@ export const List = style({
 	gridTemplateColumns: 'repeat(3, 1fr)',
 	gap: '20px',
 	marginTop: '15px',
+
+	'@media': {
+		'(max-width: 768px)': {
+			gridTemplateColumns: 'repeat(2, 1fr)',
+		},
+		'(max-width: 580px)': {
+			gridTemplateColumns: 'repeat(1, 1fr)',
+		},
+	},
 });
 
 export const Item = style({
