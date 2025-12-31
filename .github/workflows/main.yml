@@ -37,5 +37,6 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
+          passphrase: ""
           source: out/
           target: /var/www/stroymegatrans.ru/html
