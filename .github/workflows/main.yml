@@ -38,5 +38,6 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ""
-          source: out/*
+          source: out/
           target: /var/www/stroymegatrans.ru/html
+          strip_components: 1   # убирает верхний уровень папки out
