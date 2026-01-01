@@ -30,6 +30,17 @@ jobs:
       - name: build
         run: npm run build
       
+      - name: clean dir _next
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            find /var/www/stroymegatrans.ru/html \
+            ! -name 'sitemap.xml' \
+            -exec rm -rf {} \;
+      
       - name: deploy
         if: github.event_name == 'push'
         uses: appleboy/scp-action@v0.1.7
