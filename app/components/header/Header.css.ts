@@ -7,7 +7,7 @@ export const Wrapper = style({
 	backgroundSize: 'cover',
 	backgroundRepeat: 'no-repeat',
 	backgroundPosition: 'center',
-	minHeight: '681px',
+	minHeight: '731px',
 	padding: '50px 0',
 
 	'@media': {
