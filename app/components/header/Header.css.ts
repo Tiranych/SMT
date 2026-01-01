@@ -16,6 +16,7 @@ export const Wrapper = style({
 			backgroundSize: 'cover',
 			backgroundRepeat: 'no-repeat',
 			backgroundPosition: 'center',
+			padding: '30px 0',
 		},
 	},
 });
@@ -52,6 +53,9 @@ export const HeaderBody = style({
 		},
 		'(max-width: 600px) ': {
 			paddingTop: '40px',
+		},
+		'(max-width: 450px) ': {
+			paddingTop: '20px',
 		},
 	},
 });
