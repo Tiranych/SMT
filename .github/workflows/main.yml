@@ -36,7 +36,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          script: find /var/www/stroymegatrans.ru/html -mindepth 1 ! -name 'sitemap.xml' -exec rm -rf {} \;
+          script: 'find /var/www/stroymegatrans.ru/html -mindepth 1 ! -name "sitemap.xml" -exec rm -rf {} \;'
       
       - name: deploy
         if: github.event_name == 'push'
