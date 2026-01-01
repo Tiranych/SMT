@@ -30,14 +30,14 @@ jobs:
       - name: build
         run: npm run build
       
-      - name: clean dir _next
+      - name: clean dir html
         uses: appleboy/ssh-action@v0.1.8
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            find /var/www/stroymegatrans.ru/html \
+            find /var/www/stroymegatrans.ru/html -mindepth 1 \
             ! -name 'sitemap.xml' \
             -exec rm -rf {} \;
       
