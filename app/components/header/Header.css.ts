@@ -7,8 +7,17 @@ export const Wrapper = style({
 	backgroundSize: 'cover',
 	backgroundRepeat: 'no-repeat',
 	backgroundPosition: 'center',
-	minHeight: '591px',
+	minHeight: '681px',
 	padding: '50px 0',
+
+	'@media': {
+		'(max-width: 768px)': {
+			background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/images/header_image.jpg')`,
+			backgroundSize: 'cover',
+			backgroundRepeat: 'no-repeat',
+			backgroundPosition: 'center',
+		},
+	},
 });
 
 export const HeaderTop = style({

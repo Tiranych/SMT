@@ -15,6 +15,7 @@ import {
 	Title,
 	Wrapper,
 } from './Header.css';
+import { Anchor, Button, Content, Tel } from './menu/Menu.css';
 
 import { Burger } from './burger';
 import { Menu } from './menu';
@@ -51,6 +52,25 @@ export const Header = () => {
 						<p className={`${Subtitle({ display: 'none' })}`}>
 							Мы на рынке уже 20 лет!
 						</p>
+						{isMobile && (
+							<>
+								<div className={Content}>
+									<a className={`${Anchor} ${Tel}`} href='tel:89255856361'>
+										+7 (925) 585-63-61
+									</a>
+									<a className={`${Anchor} ${Tel}`} href='tel:89266007707'>
+										+7 (926) 600-77-07
+									</a>
+								</div>
+								<a
+									className={Button}
+									href='https://yandex.ru/business/widget/request/company/46134038520'
+									target='_blank'
+								>
+									Заказать звонок
+								</a>
+							</>
+						)}
 					</div>
 				</div>
 			</Container>
