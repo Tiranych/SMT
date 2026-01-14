@@ -11,6 +11,9 @@ export const metadata = {
 	icons: {
 		icon: '/assets/icons/favicon-white.svg',
 	},
+	alternates: {
+		canonical: 'https://stroymegatrans.ru/',
+	},
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
