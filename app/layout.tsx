@@ -12,7 +12,7 @@ export const metadata = {
 		icon: '/assets/icons/favicon-white.svg',
 	},
 	alternates: {
-		canonical: 'https://stroymegatrans.ru/',
+		canonical: 'https://stroymegatrans.ru',
 	},
 };
 
